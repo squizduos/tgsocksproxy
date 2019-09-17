@@ -6,5 +6,5 @@ type AppConfig struct {
 	Port     int    `default:"1080"`
 	User     string
 	Password string
-	Restrict bool
+	Restrict bool `default:"true"`
 }
