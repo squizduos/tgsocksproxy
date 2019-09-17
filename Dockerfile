@@ -8,5 +8,5 @@ RUN go get -d -v ./... && \
 # final stage
 FROM scratch
 WORKDIR /app
-COPY --from=builder /src/proxy /app/
+COPY --from=builder /src/proxy /src/rules.json /app/
 CMD ["./proxy"]
