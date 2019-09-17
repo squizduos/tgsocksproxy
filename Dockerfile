@@ -9,4 +9,6 @@ RUN go get -d -v ./... && \
 FROM scratch
 WORKDIR /app
 COPY --from=builder /src/proxy /src/rules.json /app/
+
+ENTRYPOINT [ "./proxy" ]
 CMD ["./proxy"]
